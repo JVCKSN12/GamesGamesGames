@@ -355,8 +355,18 @@ const sortSelect = document.getElementById("sortSelect");
 const resultCount = document.getElementById("resultCount");
 const gameTotal = document.getElementById("gameTotal");
 const featuredCard = document.getElementById("featuredCard");
+const gameModal = document.getElementById("gameModal");
+const modalArt = document.getElementById("modalArt");
+const modalBadge = document.getElementById("modalBadge");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalGenre = document.getElementById("modalGenre");
+const modalDifficulty = document.getElementById("modalDifficulty");
+const modalPlayers = document.getElementById("modalPlayers");
+const launchGameBtn = document.getElementById("launchGameBtn");
 
 let activeGenre = "All";
+let selectedGame = null;
 
 function renderGenreButtons() {
   genreFilter.innerHTML = genreOptions
@@ -418,10 +428,31 @@ function renderFeaturedGame() {
       <p>${highlight.description}</p>
     </div>
     <div class="featured-actions">
-      <button class="primary-btn">Play now</button>
-      <button class="secondary-btn">More games</button>
+      <button class="primary-btn" data-game-title="${highlight.title}" type="button">Play now</button>
+      <button class="secondary-btn" type="button">More games</button>
     </div>
   `;
+}
+
+function openGameModal(game) {
+  selectedGame = game;
+  modalArt.innerHTML = game.icon;
+  modalArt.style.background = game.gradient;
+  modalBadge.textContent = game.badge;
+  modalTitle.textContent = game.title;
+  modalDescription.textContent = game.description;
+  modalGenre.textContent = game.genre;
+  modalDifficulty.textContent = game.difficulty;
+  modalPlayers.textContent = `${game.players} players`;
+  launchGameBtn.textContent = `Launch ${game.title}`;
+  gameModal.classList.remove("hidden");
+  gameModal.setAttribute("aria-hidden", "false");
+}
+
+function closeGameModal() {
+  selectedGame = null;
+  gameModal.classList.add("hidden");
+  gameModal.setAttribute("aria-hidden", "true");
 }
 
 function renderGames() {
@@ -445,7 +476,7 @@ function renderGames() {
   gameGrid.innerHTML = filteredGames
     .map(
       (game) => `
-        <article class="game-card">
+        <article class="game-card" data-game-title="${game.title}">
           <div class="game-art" style="background: ${game.gradient};">
             <span class="game-icon">${game.icon}</span>
             <span class="game-badge">${game.badge}</span>
@@ -461,7 +492,7 @@ function renderGames() {
             </div>
             <p class="game-description">${game.description}</p>
             <div class="game-footer">
-              <button class="play-btn">Play now</button>
+              <button class="play-btn" type="button" data-game-title="${game.title}">Play now</button>
               <span class="players-pill">${game.players} players</span>
             </div>
           </div>
@@ -473,6 +504,39 @@ function renderGames() {
 
 searchInput.addEventListener("input", renderGames);
 sortSelect.addEventListener("change", renderGames);
+
+window.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-game-title]");
+  if (trigger && trigger.classList.contains("play-btn")) {
+    const game = games.find((item) => item.title === trigger.dataset.gameTitle);
+    if (game) openGameModal(game);
+    return;
+  }
+
+  if (trigger && trigger.classList.contains("primary-btn")) {
+    const game = games.find((item) => item.title === trigger.dataset.gameTitle);
+    if (game) openGameModal(game);
+    return;
+  }
+
+  if (event.target.closest(".game-card") && !event.target.closest("button")) {
+    const gameTitle = event.target.closest(".game-card").dataset.gameTitle;
+    const game = games.find((item) => item.title === gameTitle);
+    if (game) openGameModal(game);
+    return;
+  }
+
+  if (event.target.dataset.close === "true" || event.target.closest(".modal-close")) {
+    closeGameModal();
+  }
+});
+
+launchGameBtn.addEventListener("click", () => {
+  if (selectedGame) {
+    alert(`Launching ${selectedGame.title}!`);
+    closeGameModal();
+  }
+});
 
 renderGenreButtons();
 renderFeaturedGame();
