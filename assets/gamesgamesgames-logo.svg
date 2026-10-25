@@ -1,0 +1,36 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="1160" y2="580" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="0.52" stop-color="#1E90FF"/>
+      <stop offset="1" stop-color="#17D8B7"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="200" y1="180" x2="1040" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" rx="72" fill="#090D17"/>
+  <rect x="48" y="48" width="1184" height="544" rx="52" fill="url(#bg)"/>
+  <circle cx="1024" cy="172" r="180" fill="white" fill-opacity="0.08"/>
+  <circle cx="260" cy="450" r="220" fill="white" fill-opacity="0.06"/>
+  <rect x="120" y="126" width="220" height="220" rx="56" fill="#0F172A" fill-opacity="0.28"/>
+  <rect x="150" y="156" width="160" height="160" rx="42" fill="#FFFFFF" fill-opacity="0.12"/>
+  <path d="M222 190.5C225.5 177.5 235.5 169.5 249.5 169.5H295.5C311.5 169.5 324 183 324 199V203.5C324 214.5 319.5 224.5 311 231.5L277 260.5C265.5 270.5 261.5 281.5 261.5 293.5V300.5H328.5V332.5H227.5C210 332.5 196.5 318.5 196.5 301V289.5C196.5 277 202 266.5 212 259L247 232.5C258.5 223.5 264.5 213.5 264.5 201.5V198.5C264.5 189.5 258 182 248.5 182H248.5C235 182 224.5 191.5 222 190.5Z" fill="white"/>
+  <path d="M206.5 312H317.5V344.5H206.5V312Z" fill="white" fill-opacity="0.9"/>
+
+  <rect x="420" y="150" width="382" height="86" rx="22" fill="#0D1320" fill-opacity="0.28"/>
+  <text x="452" y="210" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="4">GAMES</text>
+  <text x="840" y="210" fill="#F5F7FF" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800" letter-spacing="3">GAMES</text>
+
+  <text x="420" y="350" fill="#F8FBFF" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="900">GamesGamesGames</text>
+  <text x="422" y="430" fill="#E5EDFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="8">BROWSER GAMES</text>
+
+  <rect x="422" y="470" width="244" height="48" rx="18" fill="#0C162B" fill-opacity="0.32"/>
+  <text x="454" y="502" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">30 Titles</text>
+  <rect x="700" y="470" width="244" height="48" rx="18" fill="#0C162B" fill-opacity="0.32"/>
+  <text x="734" y="502" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">8 Genres</text>
+
+  <rect x="96" y="90" width="1088" height="460" rx="34" fill="url(#shine)"/>
+</svg>
