@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamesGamesGames</title>
+    <meta
+      name="description"
+      content="GamesGamesGames is a massive browser game catalog with fast-action, arcade, racing, sports, and strategy experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">GGG</div>
+          <div>
+            <p class="brand-kicker">BROWSER GAMES</p>
+            <h1>GamesGamesGames</h1>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search games..." aria-label="Search games" />
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <span class="badge">New & Trending</span>
+            <h2>Play the biggest browser game collection online.</h2>
+            <p>
+              Jump into reflex-testing racers, satisfying puzzlers, tactical strategy challenges,
+              and competitive multiplayer battles. There is always another game to try next.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-card">
+                <strong id="gameTotal">0</strong>
+                <span>Games</span>
+              </div>
+              <div class="stat-card">
+                <strong>8</strong>
+                <span>Genres</span>
+              </div>
+              <div class="stat-card">
+                <strong>4.8</strong>
+                <span>Average Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-showcase">
+            <div class="featured-card" id="featuredCard"></div>
+          </div>
+        </section>
+
+        <section class="controls">
+          <div class="genre-filter" id="genreFilter" aria-label="Game genres"></div>
+
+          <div class="sort-box">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="rating">Rating</option>
+              <option value="popular">Popular</option>
+              <option value="title">Title</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="results-bar">
+          <p id="resultCount">0 games</p>
+        </section>
+
+        <section class="game-grid" id="gameGrid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
