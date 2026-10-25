@@ -6,7 +6,7 @@
     <title>GamesGamesGames</title>
     <meta
       name="description"
-      content="GamesGamesGames is a massive browser game catalog with fast-action, arcade, racing, sports, and strategy experiences."
+      content="GamesGamesGames is a huge browser game hub featuring racing, arcade, sports, strategy, and action games."
     />
     <meta property="og:title" content="GamesGamesGames" />
     <meta
@@ -17,11 +17,6 @@
     <meta property="og:image" content="assets/gamesgamesgames-logo-v2.svg" />
     <meta property="og:image:alt" content="GamesGamesGames logo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="GamesGamesGames" />
-    <meta
-      name="twitter:description"
-      content="A huge browser game hub with racing, arcade, sports, strategy, and action games."
-    />
     <meta name="twitter:image" content="assets/gamesgamesgames-logo-v2.svg" />
     <meta name="theme-color" content="#7c5cff" />
     <link rel="icon" type="image/svg+xml" href="assets/gamesgamesgames-logo-v2.svg" />
@@ -40,7 +35,7 @@
           <img
             src="assets/gamesgamesgames-logo-v2.svg"
             alt="GamesGamesGames logo"
-            style="width: 52px; height: 52px; border-radius: 16px;"
+            class="brand-logo"
           />
           <div>
             <p class="brand-kicker">BROWSER GAMES</p>
@@ -50,7 +45,7 @@
 
         <div class="search-wrap">
           <span class="search-icon">⌕</span>
-          <input id="searchInput" type="search" placeholder="Search games..." aria-label="Search games" />
+          <input id="searchInput" type="search" aria-label="Search games" placeholder="Search games..." />
         </div>
       </header>
 
@@ -61,7 +56,7 @@
             <h2>Play the biggest browser game collection online.</h2>
             <p>
               Jump into reflex-testing racers, satisfying puzzlers, tactical strategy challenges,
-              and competitive multiplayer battles. There is always another game to try next.
+              and competitive multiplayer battles. Every visit feels like a fresh challenge.
             </p>
 
             <div class="stats-row">
@@ -86,7 +81,7 @@
         </section>
 
         <section class="controls">
-          <div class="genre-filter" id="genreFilter" aria-label="Game genres"></div>
+          <div id="genreFilter" class="genre-filter" aria-label="Game genre filter"></div>
 
           <div class="sort-box">
             <label for="sortSelect">Sort by</label>
@@ -103,26 +98,30 @@
           <p id="resultCount">0 games</p>
         </section>
 
-        <section class="game-grid" id="gameGrid" aria-live="polite"></section>
+        <section id="gameGrid" class="game-grid" aria-live="polite"></section>
       </main>
     </div>
 
-    <div class="game-modal hidden" id="gameModal" aria-hidden="true">
+    <div id="gameModal" class="game-modal hidden" aria-hidden="true">
       <div class="modal-backdrop" data-close="true"></div>
       <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <button class="modal-close" type="button" aria-label="Close game details">×</button>
-        <div class="modal-art" id="modalArt"></div>
+        <button class="modal-close" type="button" aria-label="Close details">×</button>
+        <div id="modalArt" class="modal-art"></div>
         <div class="modal-content">
-          <span class="featured-tag" id="modalBadge">Game</span>
+          <span id="modalBadge" class="featured-tag">Game</span>
           <h3 id="modalTitle">Game title</h3>
           <p id="modalDescription">Game description</p>
+
           <div class="modal-meta">
             <span id="modalGenre">Genre</span>
             <span id="modalDifficulty">Difficulty</span>
             <span id="modalPlayers">Players</span>
           </div>
+
+          <div id="embedStatus" class="embed-status"></div>
+
           <div class="modal-actions">
-            <button class="primary-btn" id="launchGameBtn" type="button">Launch game</button>
+            <button id="launchGameBtn" class="primary-btn" type="button">Launch game</button>
             <button class="secondary-btn" type="button" data-close="true">Close</button>
           </div>
         </div>
