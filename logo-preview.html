@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamesGamesGames Logo Preview</title>
+    <style>
+      :root {
+        --bg: #090d17;
+        --panel: #111827;
+        --text: #edf3ff;
+        --muted: #b4c0d8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, rgba(124, 92, 255, 0.18), transparent 40%), var(--bg);
+        color: var(--text);
+        font-family: Inter, Arial, sans-serif;
+      }
+      .card {
+        width: min(760px, 90vw);
+        padding: 28px;
+        border-radius: 28px;
+        background: rgba(17, 24, 39, 0.88);
+        border: 1px solid rgba(255,255,255,0.12);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      }
+      .logo-wrap {
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        background: linear-gradient(135deg, rgba(124, 92, 255, .18), rgba(23,216,183,.18));
+        border-radius: 24px;
+      }
+      img {
+        width: min(420px, 75vw);
+        height: auto;
+        display: block;
+      }
+      h1 {
+        margin: 18px 0 8px;
+        text-align: center;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+      }
+      p {
+        margin: 0;
+        text-align: center;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="logo-wrap">
+        <img src="assets/gamesgamesgames-logo-v2.svg" alt="GamesGamesGames logo" />
+      </div>
+      <h1>GamesGamesGames</h1>
+      <p>Three interlocking Gs, wrapped into a modern game-brand emblem.</p>
+    </div>
+  </body>
+</html>
