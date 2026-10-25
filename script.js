@@ -284,6 +284,50 @@ const games = [
     difficulty: "Medium",
     description: "Charge through dusty canyon tracks and leap over little obstacles in this chaotic animal racer.",
     gradient: "linear-gradient(135deg, #f4d35e 0%, #f76f8e 100%)"
+  },
+  {
+    title: "Vex.io",
+    genre: "Action",
+    icon: "🌀",
+    badge: "Arena",
+    rating: 4.8,
+    players: "1-8",
+    difficulty: "Hard",
+    description: "Zoom around a dynamic arena, absorb smaller rivals, and outmaneuver bigger circles in a survival showdown.",
+    gradient: "linear-gradient(135deg, #7c5cff 0%, #00d2ff 100%)"
+  },
+  {
+    title: "Paper.io 2",
+    genre: "Arcade",
+    icon: "📄",
+    badge: "Territory",
+    rating: 4.7,
+    players: "1-8",
+    difficulty: "Medium",
+    description: "Claim territory, dodge enemy lines, and turn your expanding square into an unstoppable paper empire.",
+    gradient: "linear-gradient(135deg, #5eead4 0%, #60a5fa 100%)"
+  },
+  {
+    title: "Basketbros",
+    genre: "Sports",
+    icon: "🏀",
+    badge: "Team",
+    rating: 4.6,
+    players: "1-4",
+    difficulty: "Medium",
+    description: "Run flashy plays, sink clutch shots, and outscore your rivals in a lightning-fast basketball showdown.",
+    gradient: "linear-gradient(135deg, #f6b73c 0%, #e76f51 100%)"
+  },
+  {
+    title: "Soccerbros",
+    genre: "Sports",
+    icon: "⚽",
+    badge: "Match",
+    rating: 4.7,
+    players: "1-4",
+    difficulty: "Medium",
+    description: "Dribble, pass, and score in a stylish arcade soccer match built for quick, competitive rounds.",
+    gradient: "linear-gradient(135deg, #34d399 0%, #0ea5e9 100%)"
   }
 ];
 
